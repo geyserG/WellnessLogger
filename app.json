@@ -1,0 +1,12 @@
+{
+  "name": "WellnessLogger",
+  "displayName": "WellnessLogger",
+  "expo": {
+    "name": "WellnessLogger",
+    "slug": "WellnessLogger",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
