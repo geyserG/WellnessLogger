@@ -1,8 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image
+} from 'react-native';
 import AppLoading from 'expo-app-loading';
-import { useFonts, Poppins_400Regular, Poppins_700Bold, Poppins_700Bold_Italic } from '@expo-google-fonts/poppins';
+import { 
+  useFonts,
+  Poppins_400Regular,
+  Poppins_700Bold,
+  Poppins_700Bold_Italic
+} from '@expo-google-fonts/poppins';
 import {styles} from './globalStyles';
 import MyButton from './components/MyButton';
 const logo = require('./src/assets/images/Grupo-914.png');
