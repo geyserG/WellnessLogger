@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Alert, Button } from 'react-native';
+import { Text, View, Alert, Button } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import { useFonts, Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
+import {styles} from './globalStyles';
 
 export default App = () => {
   let [fontsLoaded] = useFonts({
@@ -17,7 +18,7 @@ export default App = () => {
       <StatusBar style="auto" />
       <Text style={styles.h1}>Welcome to</Text>
       <Text style={[styles.h1, styles.bold]}>Bowhead's</Text>
-      <Text>Wellness Logger</Text>
+      <Text style={styles.wellness_logger}>Wellness Logger</Text>
       <Button
         onPress={() => Alert.alert('Button with adjusted color pressed')}
         title="START"
@@ -28,22 +29,4 @@ export default App = () => {
   );
 }
 
-const styles = StyleSheet.create({
-  h1: {
-    fontSize: 30,
-    fontFamily: 'Poppins_400Regular'
-  },
-  h2: {
-    fontSize: 20,
-    fontFamily: 'Poppins_400Regular'
-  },
-  bold: {
-    fontFamily: 'Poppins_700Bold'
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
