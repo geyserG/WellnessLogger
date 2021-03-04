@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import {  StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, Image } from 'react-native';
 import {styles} from '../globalStyles';
 const imageHr = require('../src/assets/images/Linea-56.png');
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import AnswerLog from '../components/AnswerLog';
 import ButtonBack from '../components/ButtonBack';
 import {styles} from '../globalStyles';
@@ -18,9 +18,9 @@ class ScreenAnswerLogs extends Component {
             <ButtonBack/>
             <Text style={[styles.h2, styles.bold, {fontSize: 32}]}> Answer Logs </Text>
         </View>
-        <View style={[styles.container, localStyles.containerLogs]}>
+        <ScrollView style={[styles.container, localStyles.containerLogs]}>
             <AnswerLog /><AnswerLog /><AnswerLog />
-        </View>
+        </ScrollView>
       </View>
     );
   }
@@ -42,6 +42,8 @@ const localStyles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white',
         borderTopLeftRadius: 10,
-        borderTopRightRadius: 10
+        borderTopRightRadius: 10,
+        borderTopColor: '#c8c8c8',
+        borderWidth: 1,
     }
 });
