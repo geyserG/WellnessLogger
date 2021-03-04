@@ -38,6 +38,7 @@ export default ViewPassword;
 const localStyles = StyleSheet.create({
   container: {
     display: 'flex',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
+    alignItems: 'center'
   }
 });

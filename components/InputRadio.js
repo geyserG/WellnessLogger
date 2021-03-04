@@ -29,8 +29,8 @@ class InputRadio extends PureComponent {
   render() {
     const {props, state} = this;
     return (<>
-        {this.options.map(option => {
-            return <TouchableOpacity onPress={() => this.handdlePress(option.key)} style={localStyles.container}>
+        {this.options.map((option, key) => {
+            return <TouchableOpacity key={key} onPress={() => this.handdlePress(option.key)} style={localStyles.container}>
                 {this.setImageRadio(option.key)}
                 <Text style={styles.p}>{option.text} {state.checked}</Text>
           </TouchableOpacity>

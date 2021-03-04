@@ -43,7 +43,8 @@ const localStyles = StyleSheet.create({
       display: 'flex',
       justifyContent: 'space-evenly',
       paddingTop: 54,
-      paddingBottom: 79
+      paddingBottom: 79,
+      alignItems: 'center'
     },
     logo: {
       width: 79.64,
