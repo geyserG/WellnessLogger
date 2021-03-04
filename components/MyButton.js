@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import {  Alert, TouchableOpacity, Text } from 'react-native';
+import {  TouchableOpacity, Text } from 'react-native';
 import {styles} from '../globalStyles';
 
 class MyButton extends PureComponent {
@@ -10,6 +10,7 @@ class MyButton extends PureComponent {
   }
 
   render() {
+    const {props} = this;
     return (
     <TouchableOpacity
         onPress={this.props.onPress}

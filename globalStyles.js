@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
   },
   p: {
     fontSize: 14,
-    font: '200'
+    lineHeight: 21
   },
 
   // form
@@ -80,6 +80,7 @@ export const styles = StyleSheet.create({
   },
   imageHr: {
     marginBottom: 22,
-    marginTop: 16
+    marginTop: 16,
+    width: '100%'
   }
 });
