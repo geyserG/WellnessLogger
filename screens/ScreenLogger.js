@@ -27,6 +27,12 @@ export default function ScreenLogger() {
         showLabel: false,
         tabStyle: {
             minHeight: 80,
+            shadowOffset: {
+                width: 0,
+                height: 0
+            },
+            shadowOpacity: .15,
+            shadowRadius: 6,
         }
     }}
     >
