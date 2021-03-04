@@ -24,10 +24,8 @@ export const styles = StyleSheet.create({
       fontSize: 25,
   },
   container: {
-    // alignItems: 'center',
     backgroundColor: '#fff',
     flex: 1,
-    // justifyContent: 'center',
     padding: 21,
   },
   btnPrimary: {
