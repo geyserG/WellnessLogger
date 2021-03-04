@@ -26,7 +26,7 @@ export default App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen name="Home" component={ScreenHome} options={{ title: 'Wellcome' }} /> */}
+        <Stack.Screen name="Home" component={ScreenHome} options={{ title: 'Wellcome' }} />
         <Stack.Screen name="Password" component={ScreenPassword} />
       </Stack.Navigator>
     </NavigationContainer>

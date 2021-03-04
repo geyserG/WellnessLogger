@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Image } from 'react-native';
 import {styles} from '../globalStyles';
 import MyButton from '../components/MyButton';
+const imageApp = require('../src/assets/images/Grupo-1509.png');
 
 class ViewPassword extends Component {
   constructor(props) {
@@ -12,9 +13,20 @@ class ViewPassword extends Component {
 
   render() {
     return (
-        <View style={[styles.container]}>
-            <Text style={[styles.h2, styles.bold]}>Create a Password</Text>
-            <TextInput style={styles.textInput}></TextInput>
+        <View style={[styles.container, localStyles.container]}>
+            <View style={{alignItems:'stretch'}}>
+              <Image
+                style={[styles.imageApp, {marginBottom: 21}]}
+                source={imageApp}
+              />
+              <Text style={[styles.h2, styles.bold, styles.textCenter]}>Create a Password</Text>
+              <TextInput 
+              style={styles.textInput}
+              autoCompleteTypeson="off"
+              textContentType="password"
+              secureTextEntry={true}
+              placeholder="Password"/>
+            </View>
             <MyButton title="Lets Go!"/>
         </View>
     );
@@ -22,3 +34,10 @@ class ViewPassword extends Component {
 }
 
 export default ViewPassword;
+
+const localStyles = StyleSheet.create({
+  container: {
+    display: 'flex',
+    justifyContent: 'space-evenly'
+  }
+});

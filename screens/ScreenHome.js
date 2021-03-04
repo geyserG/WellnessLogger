@@ -26,7 +26,7 @@ class Start extends Component {
                 <Text style={[styles.h1, styles.bold]}>Bowhead<Text style={{fontFamily: 'Poppins_700Bold_Italic'}}>'</Text>s</Text>
                 </View>
                 <Image
-                style={localStyles.imageApp}
+                style={styles.imageApp}
                 source={imageApp}
                 />
                 <Text style={styles.wellness_logger}>Wellness Logger</Text>
@@ -49,8 +49,4 @@ const localStyles = StyleSheet.create({
       width: 79.64,
       height: 50.65,
     },
-    imageApp: {
-      width: 302.39,
-      height: 252.41
-    }
 });

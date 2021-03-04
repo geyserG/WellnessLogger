@@ -2,41 +2,41 @@
 import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   h1: {
+    fontFamily: 'Poppins_400Regular',
     fontSize: 30,
-    fontFamily: 'Poppins_400Regular'
   },
   h2: {
+    fontFamily: 'Poppins_400Regular',
     fontSize: 25,
-    fontFamily: 'Poppins_400Regular'
   },
   bold: {
     fontFamily: 'Poppins_700Bold'
   },
   wellness_logger: {
+    fontFamily: 'Poppins_400Regular',
       fontSize: 25,
-      fontFamily: 'Poppins_400Regular'
   },
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
+    backgroundColor: '#fff',
+    flex: 1,
     justifyContent: 'center',
     padding: 21,
   },
   btnPrimary: {
-    backgroundColor:'#1dacc1',
-    display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor:'#1dacc1',
     borderRadius: 10,
+    display: 'flex',
     height: 66,
-    width: 273,
-    shadowOpacity: .15,
-    shadowRadius: 6,
+    justifyContent: 'center',
     shadowOffset: {
       width: 0,
       height: 5
     },
+    shadowOpacity: .15,
+    shadowRadius: 6,
+    width: 273,
   },
   btnText: {
     fontSize: 21,
@@ -44,16 +44,27 @@ export const styles = StyleSheet.create({
   textWhite: {
     color: '#fff'
   },
+  textCenter: {
+    textAlign: 'center'
+  },
 
   // form
   textInput: {
-    height: 54,
     borderColor: '#b9b9b9',
+    borderRadius: 5,
     borderWidth: 1,
-    width: '100%',
-    marginTop: 28,
+    display: 'flex',
+    fontFamily: 'Poppins_400Regular',
+    fontSize: 14,
+    height: 54,
     marginBottom: 28,
-    borderRadius: 5
+    marginTop: 28,
+    padding: 15,
+  },
 
+  // other
+  imageApp: {
+    width: 302.39,
+    height: 252.41
   }
 });
