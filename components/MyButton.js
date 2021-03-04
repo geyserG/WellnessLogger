@@ -12,7 +12,7 @@ class MyButton extends PureComponent {
   render() {
     return (
     <TouchableOpacity
-        onPress={() => Alert.alert('Button with adjusted color pressed')}
+        onPress={this.props.onPress}
         style={styles.btnPrimary}
         accessibilityLabel="Learn more about this purple button"
     >
