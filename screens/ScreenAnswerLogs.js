@@ -15,7 +15,7 @@ class ScreenAnswerLogs extends Component {
     return (
       <View style={localStyles.container}>
         <View style={[styles.container, localStyles.containerHead]}>
-            <ButtonBack onPress={() => this.props.navigation.navigate('Track')}/>
+            <ButtonBack onPress={() => this.props.navigation.navigate('New Logger')}/>
             <Text style={[styles.h2, styles.bold, {fontSize: 32}]}> Answer Logs </Text>
         </View>
         <ScrollView style={[styles.container, localStyles.containerLogs]}>
@@ -42,8 +42,6 @@ const localStyles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white',
         borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-        borderTopColor: '#c8c8c8',
-        borderWidth: 1,
+        borderTopRightRadius: 10
     }
 });

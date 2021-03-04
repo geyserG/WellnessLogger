@@ -27,7 +27,7 @@ class ViewPassword extends Component {
               secureTextEntry={true}
               placeholder="Password"/>
             </View>
-            <MyButton title="Lets Go!" onPress={() => this.props.navigation.navigate('Track')}/>
+            <MyButton title="Lets Go!" onPress={() => this.props.navigation.navigate('Logger')}/>
         </View>
     );
   }

@@ -47,7 +47,7 @@ class ScreenTrackForm extends Component {
             source={imageHeader}
             />
         </View>
-        <Text style={[styles.h2, styles.textCenter]}>Track your wellness</Text>
+        <Text style={[styles.h2, styles.textCenter, styles.semiBold]}>Track your wellness</Text>
         <Image
         style={styles.imageHr}
         source={imageHr}
