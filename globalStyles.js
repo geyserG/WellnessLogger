@@ -9,6 +9,10 @@ export const styles = StyleSheet.create({
     fontFamily: 'Poppins_400Regular',
     fontSize: 25,
   },
+  h3: {
+    fontFamily: 'Poppins_400Regular',
+    fontSize: 20,
+  },
   bold: {
     fontFamily: 'Poppins_700Bold'
   },
@@ -17,10 +21,10 @@ export const styles = StyleSheet.create({
       fontSize: 25,
   },
   container: {
-    alignItems: 'center',
+    // alignItems: 'center',
     backgroundColor: '#fff',
     flex: 1,
-    justifyContent: 'center',
+    // justifyContent: 'center',
     padding: 21,
   },
   btnPrimary: {
@@ -47,6 +51,13 @@ export const styles = StyleSheet.create({
   textCenter: {
     textAlign: 'center'
   },
+  alignItemsCenter: {
+    alignItems: 'center'
+  },
+  p: {
+    fontSize: 14,
+    font: '200'
+  },
 
   // form
   textInput: {
@@ -66,5 +77,9 @@ export const styles = StyleSheet.create({
   imageApp: {
     width: 302.39,
     height: 252.41
+  },
+  imageHr: {
+    marginBottom: 22,
+    marginTop: 16
   }
 });

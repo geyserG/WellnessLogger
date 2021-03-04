@@ -11,6 +11,7 @@ import {
 }                               from '@expo-google-fonts/poppins';
 import ScreenHome               from './screens/ScreenHome';
 import ScreenPassword           from './screens/ScreenPassword';
+import ScreenTrackForm          from './screens/ScreenTrackForm';
 
 const Stack = createStackNavigator();
 
@@ -26,8 +27,9 @@ export default App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={ScreenHome} options={{ title: 'Wellcome' }} />
-        <Stack.Screen name="Password" component={ScreenPassword} />
+        {/* <Stack.Screen name="Home" component={ScreenHome} options={{ title: 'Wellcome' }} />
+        <Stack.Screen name="Password" component={ScreenPassword} /> */}
+        <Stack.Screen name="Track" component={ScreenTrackForm} />
       </Stack.Navigator>
     </NavigationContainer>
   );
