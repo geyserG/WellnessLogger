@@ -13,6 +13,31 @@ class ScreenTrackForm extends Component {
     };
   }
 
+  optionsAsk1 = [
+    {
+      key: 'option_1',
+      text: "Perfect, thank you!"
+    },
+    {
+      key: 'option_2',
+      text: "Meh, I'm alive"
+    },
+    {
+      key: 'option_3',
+      text: "Worst day even"
+    },
+  ]
+  optionsAsk2 = [
+    {
+      key: 'yes',
+      text: 'Yes'
+    },
+    {
+      key: 'no',
+      text: 'No'
+    }
+  ]
+
   render() {
     return (
       <View style={styles.container}>
@@ -29,9 +54,7 @@ class ScreenTrackForm extends Component {
         />
         <View>
             <Text style={[styles.h3, localStyles.textQuestion]}>How do you feel?</Text>
-            <InputRadio text="Perfect, thank you!"/>
-            <InputRadio text="Meh, I'm alive"/>
-            <InputRadio text="Worst day even"/>
+            <InputRadio options={this.optionsAsk1}/>
         </View>
         <Image
         style={styles.imageHr}
@@ -39,8 +62,7 @@ class ScreenTrackForm extends Component {
         />
         <View>
             <Text style={[styles.h3, localStyles.textQuestion]}>Did you sleep well?</Text>
-            <InputRadio text="Yes"/>
-            <InputRadio text="No"/>
+            <InputRadio options={this.optionsAsk2}/>
         </View>
         <Image
         style={styles.imageHr}

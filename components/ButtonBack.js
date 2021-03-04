@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
-import {  TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity, Image } from 'react-native';
 import {styles} from '../globalStyles';
-
-class MyButton extends PureComponent {
+const imageBtn = require('../src/assets/images/Grupo-508.png');
+class ButtonBack extends PureComponent {
   constructor(props) {
     super(props);
     this.disabled = this.props.disabled || false
@@ -16,12 +16,12 @@ class MyButton extends PureComponent {
       accessibilityRole="button"
       disabled={disabled}
       onPress={this.props.onPress}
-      style={[styles.btnPrimary, disabled && styles.btnDisabled]}
+      style={styles.btn}
     >
-      <Text style={[styles.textWhite, styles.btnText]}>{this.props.title}</Text>
+      <Image source={imageBtn}/>
     </TouchableOpacity>
     );
   }
 }
 
-export default MyButton;
+export default ButtonBack;

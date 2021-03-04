@@ -6,32 +6,36 @@ const imageRadioChecked = require('../src/assets/images/Componente-13-110.png');
 class InputRadio extends PureComponent {
   constructor(props) {
     super(props);
-    this.handdlePress = this.handdlePress.bind(this);
     this.state = {
-        checked: false
+        selected: ''
     };
+    this.options = this.props.options || [];
+    // this.handdlePress = this.handdlePress.bind(this);
   }
-  handdlePress = () => {
+  options = [];
+  handdlePress = (key) => {
       this.setState(state => ({
-        checked: !state.checked
+        selected: key
       }))
   }
-  setImageRadio = () => {
-      if (this.state.checked === false) {
-          return <Image source={imageRadio} style={localStyles.imageRadio} />
-      } else {
-          return <Image source={imageRadioChecked} style={localStyles.imageRadio} />
-      }
+  setImageRadio = (key) => {
+    if (this.state.selected === key) {
+        return <Image source={imageRadioChecked} style={localStyles.imageRadio} />
+    } else {
+        return <Image source={imageRadio} style={localStyles.imageRadio} />
+    }
   }
 
   render() {
     const {props, state} = this;
-    return (
-      <TouchableOpacity onPress={this.handdlePress} style={localStyles.container}>
-        {this.setImageRadio()}
-        <Text style={styles.p}>{props.text} {state.checked}</Text>
-      </TouchableOpacity>
-    );
+    return (<>
+        {this.options.map(option => {
+            return <TouchableOpacity onPress={() => this.handdlePress(option.key)} style={localStyles.container}>
+                {this.setImageRadio(option.key)}
+                <Text style={styles.p}>{option.text} {state.checked}</Text>
+          </TouchableOpacity>
+        })}
+    </>);
   }
 }
 

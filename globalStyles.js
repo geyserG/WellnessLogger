@@ -16,6 +16,9 @@ export const styles = StyleSheet.create({
   bold: {
     fontFamily: 'Poppins_700Bold'
   },
+  semiBold: {
+    fontFamily: 'Poppins_600SemiBold'
+  },
   wellness_logger: {
     fontFamily: 'Poppins_400Regular',
       fontSize: 25,
@@ -44,6 +47,9 @@ export const styles = StyleSheet.create({
   },
   btnText: {
     fontSize: 21,
+  },
+  btnDisabled: {
+    backgroundColor: 'lightgrey'
   },
   textWhite: {
     color: '#fff'
