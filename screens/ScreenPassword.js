@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import {styles} from '../globalStyles';
-import MyButton from './MyButton';
+import MyButton from '../components/MyButton';
 
 class ViewPassword extends Component {
   constructor(props) {
@@ -13,7 +13,8 @@ class ViewPassword extends Component {
   render() {
     return (
         <View style={[styles.container]}>
-            <Text style={styles.h2}>Create a Password</Text>
+            <Text style={[styles.h2, styles.bold]}>Create a Password</Text>
+            <TextInput style={styles.textInput}></TextInput>
             <MyButton title="Lets Go!"/>
         </View>
     );

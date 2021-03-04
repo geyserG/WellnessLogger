@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Poppins_400Regular'
   },
   h2: {
-    fontSize: 20,
+    fontSize: 25,
     fontFamily: 'Poppins_400Regular'
   },
   bold: {
@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 21,
   },
   btnPrimary: {
     backgroundColor:'#1dacc1',
@@ -42,5 +43,17 @@ export const styles = StyleSheet.create({
   },
   textWhite: {
     color: '#fff'
+  },
+
+  // form
+  textInput: {
+    height: 54,
+    borderColor: '#b9b9b9',
+    borderWidth: 1,
+    width: '100%',
+    marginTop: 28,
+    marginBottom: 28,
+    borderRadius: 5
+
   }
 });

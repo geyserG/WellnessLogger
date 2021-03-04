@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {styles} from '../globalStyles';
-import MyButton from './MyButton';
+import MyButton from '../components/MyButton';
 const logo = require('../src/assets/images/Grupo-914.png');
 const imageApp = require('../src/assets/images/Grupo-1509.png');
 
