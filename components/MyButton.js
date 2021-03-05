@@ -17,7 +17,7 @@ class MyButton extends PureComponent {
     disabled: false
   }
 
-  componentWillReceiveProps = (props) => {
+  UNSAFE_componentWillReceiveProps = (props) => {
     this.setState({
       disabled: props.disabled
     })
