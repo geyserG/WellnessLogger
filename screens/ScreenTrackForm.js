@@ -1,9 +1,17 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text, Image, ScrollView } from 'react-native';
-import {styles} from '../globalStyles';
-import MyButton from '../components/MyButton';
-import InputRadio from '../components/InputRadio';
-const imageHr = require('../src/assets/images/Linea-56.png');
+import 
+  React, 
+  { Component }     from 'react';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  ScrollView
+}                   from 'react-native';
+import {styles}     from '../globalStyles';
+import MyButton     from '../components/MyButton';
+import InputRadio   from '../components/InputRadio';
+const imageHr =     require('../src/assets/images/Linea-56.png');
 const imageHeader = require('../src/assets/images/Grupo-660.png');
 
 class ScreenTrackForm extends Component {
@@ -66,32 +74,27 @@ class ScreenTrackForm extends Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.alignItemsCenter}>
-            <Image
-            style={[localStyles.imageHeader, styles.alignItemsCenter]}
-            source={imageHeader}
-            />
+            <Image style={[localStyles.imageHeader, styles.alignItemsCenter]} source={imageHeader}/>
         </View>
+        
         <Text style={[styles.h2, styles.textCenter, styles.semiBold]}>Track your wellness</Text>
-        <Image
-        style={styles.imageHr}
-        source={imageHr}
-        />
+        
+        <Image style={styles.imageHr} source={imageHr}/>
+        
         <View>
             <Text style={[styles.h3, localStyles.textQuestion]}>How do you feel?</Text>
             <InputRadio options={this.optionsAnswer1} onChange={setAnswer1}/>
         </View>
-        <Image
-        style={styles.imageHr}
-        source={imageHr}
-        />
+        
+        <Image style={styles.imageHr} source={imageHr}/>
+        
         <View>
             <Text style={[styles.h3, localStyles.textQuestion]}>Did you sleep well?</Text>
             <InputRadio options={this.optionsAnswer2} onChange={setAnswer2}/>
         </View>
-        <Image
-        style={styles.imageHr}
-        source={imageHr}
-        />
+        
+        <Image style={styles.imageHr} source={imageHr}/>
+        
         <View style={styles.alignItemsCenter}>
           <MyButton title="Submit" onPress={() => props.navigation.navigate('Logs')} disabled={setDisabled()} style={styles.alignItemsCenter}/>
         </View>
@@ -104,9 +107,9 @@ export default ScreenTrackForm;
 
 const localStyles = StyleSheet.create({
     imageHeader: {
-        width: 151.18,
-        height: 117.25,
-        marginBottom: 8
+      height: 117.25,
+      marginBottom: 8,
+      width: 151.18,
     },
     textQuestion: {
       marginBottom: 7.5

@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
   },
   wellness_logger: {
     fontFamily: 'Poppins_400Regular',
-      fontSize: 25,
+    fontSize: 25,
   },
   container: {
     backgroundColor: '#fff',
@@ -79,8 +79,8 @@ export const styles = StyleSheet.create({
 
   // other
   imageApp: {
+    height: 252.41,
     width: 302.39,
-    height: 252.41
   },
   imageHr: {
     marginBottom: 22,

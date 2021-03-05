@@ -1,7 +1,13 @@
-import React, { PureComponent } from 'react';
-import { TouchableOpacity, Image } from 'react-native';
-import {styles} from '../globalStyles';
-const imageBtn = require('../src/assets/images/Grupo-508.png');
+import 
+  React, 
+  { PureComponent } from 'react';
+import {
+  TouchableOpacity,
+  Image
+}                   from 'react-native';
+import {styles}     from '../globalStyles';
+const imageBtn =    require('../src/assets/images/Grupo-508.png');
+
 class ButtonBack extends PureComponent {
   constructor(props) {
     super(props);

@@ -1,6 +1,11 @@
-import React, { PureComponent } from 'react';
-import {  TouchableOpacity, Text } from 'react-native';
-import {styles} from '../globalStyles';
+import 
+  React,
+  { PureComponent } from 'react';
+import {
+  TouchableOpacity,
+  Text
+}                   from 'react-native';
+import {styles}     from '../globalStyles';
 
 class MyButton extends PureComponent {
   constructor(props) {
@@ -12,7 +17,7 @@ class MyButton extends PureComponent {
     disabled: false
   }
 
-  UNSAFE_componentWillReceiveProps = (props) => {
+  componentWillReceiveProps = (props) => {
     this.setState({
       disabled: props.disabled
     })
