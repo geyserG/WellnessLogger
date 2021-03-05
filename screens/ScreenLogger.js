@@ -21,21 +21,23 @@ export default function ScreenLogger() {
           return <Ionicons name={iconName} size={30} color={color} />;
       },
     })}
-        tabBarOptions={{
-        activeTintColor: '#1dacc1',
-        inactiveTintColor: 'gray',
-        showLabel: false,
-        tabStyle: {
-          minHeight: 80,
+    tabBarOptions={{
+      activeTintColor: '#1dacc1',
+      inactiveTintColor: 'gray',
+      showLabel: false,
+      tabStyle: {
+        minHeight: 85,
+        top: 0,
+      },
+      style: {
+        minHeight: 85,
+        shadowOffset: {
+          width: 0,
+          height: -5
         },
-        style: {
-          shadowOffset: {
-            width: 0,
-            height: -5
-          },
-          shadowOpacity: .2,
-          shadowRadius: 6,
-        }
+        shadowOpacity: .2,
+        shadowRadius: 6,
+      }
     }}
     >
         <Tab.Screen name="New Logger" showLabel={false} component={ScreenTrackForm} />

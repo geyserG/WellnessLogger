@@ -43,6 +43,7 @@ const localStyles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white',
         borderTopLeftRadius: 10,
-        borderTopRightRadius: 10
+        borderTopRightRadius: 10,
+        paddingTop: 30
     }
 });
