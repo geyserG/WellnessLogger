@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, Image, ScrollView } from 'react-native';
 import {styles} from '../globalStyles';
 import MyButton from '../components/MyButton';
 import InputRadio from '../components/InputRadio';
@@ -10,10 +10,12 @@ class ScreenTrackForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      answer1: '',
+      answer2: ''
     };
   }
 
-  optionsAsk1 = [
+  optionsAnswer1 = [
     {
       key: 'option_1',
       text: "Perfect, thank you!"
@@ -27,7 +29,7 @@ class ScreenTrackForm extends Component {
       text: "Worst day even"
     },
   ]
-  optionsAsk2 = [
+  optionsAnswer2 = [
     {
       key: 'yes',
       text: 'Yes'
@@ -38,9 +40,31 @@ class ScreenTrackForm extends Component {
     }
   ]
 
+  setAnswer1 = (key) => {
+    this.setState(() => ({
+      answer1: key
+    }))
+  }
+
+  setAnswer2 = (key) => {
+    this.setState(() => ({
+      answer2: key
+    }))
+  }
+
+  setDisabled = () => {
+    const {answer1, answer2} = this.state;
+    if (answer1 === '' || answer2 === '') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   render() {
+    const { props, setAnswer1, setAnswer2, setDisabled } = this;
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <View style={styles.alignItemsCenter}>
             <Image
             style={[localStyles.imageHeader, styles.alignItemsCenter]}
@@ -54,7 +78,7 @@ class ScreenTrackForm extends Component {
         />
         <View>
             <Text style={[styles.h3, localStyles.textQuestion]}>How do you feel?</Text>
-            <InputRadio options={this.optionsAsk1}/>
+            <InputRadio options={this.optionsAnswer1} onChange={setAnswer1}/>
         </View>
         <Image
         style={styles.imageHr}
@@ -62,16 +86,16 @@ class ScreenTrackForm extends Component {
         />
         <View>
             <Text style={[styles.h3, localStyles.textQuestion]}>Did you sleep well?</Text>
-            <InputRadio options={this.optionsAsk2}/>
+            <InputRadio options={this.optionsAnswer2} onChange={setAnswer2}/>
         </View>
         <Image
         style={styles.imageHr}
         source={imageHr}
         />
         <View style={styles.alignItemsCenter}>
-          <MyButton title="Submit" style={styles.alignItemsCenter}/>
+          <MyButton title="Submit" onPress={() => props.navigation.navigate('Logs')} disabled={setDisabled()} style={styles.alignItemsCenter}/>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }

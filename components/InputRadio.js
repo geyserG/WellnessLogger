@@ -16,7 +16,8 @@ class InputRadio extends PureComponent {
   handdlePress = (key) => {
       this.setState(state => ({
         selected: key
-      }))
+      }));
+      this.props.onChange(key);
   }
   setImageRadio = (key) => {
     if (this.state.selected === key) {

@@ -5,12 +5,22 @@ import {styles} from '../globalStyles';
 class MyButton extends PureComponent {
   constructor(props) {
     super(props);
-    this.disabled = this.props.disabled || false
+    this.state.disabled = this.props.disabled || false
   }
-  disabled = false;
+
+  state = {
+    disabled: false
+  }
+
+  UNSAFE_componentWillReceiveProps = (props) => {
+    this.setState({
+      disabled: props.disabled
+    })
+  }
 
   render() {
-    const {props, disabled} = this;
+    const {props} = this;
+    const {disabled} = this.state;
     return (
     <TouchableOpacity
       accessibilityRole="button"

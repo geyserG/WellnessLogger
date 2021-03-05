@@ -12,10 +12,11 @@ class ScreenAnswerLogs extends Component {
   }
 
   render() {
+    const {props} = this;
     return (
       <View style={localStyles.container}>
         <View style={[styles.container, localStyles.containerHead]}>
-            <ButtonBack onPress={() => this.props.navigation.navigate('New Logger')}/>
+            <ButtonBack onPress={() => props.navigation.navigate('New Logger')}/>
             <Text style={[styles.h2, styles.bold, {fontSize: 32}]}> Answer Logs </Text>
         </View>
         <ScrollView style={[styles.container, localStyles.containerLogs]}>
