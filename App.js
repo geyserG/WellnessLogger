@@ -29,9 +29,12 @@ export default App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={ScreenHome} options={{ title: 'Wellcome' }} />
+        <Stack.Screen name="Home"     component={ScreenHome} options={{ title: 'Wellcome' }} />
         <Stack.Screen name="Password" component={ScreenPassword} />
-        <Stack.Screen name="Logger" component={ScreenLogger} />
+        <Stack.Screen name="Logger"   component={ScreenLogger}
+        options={{
+          headerLeft: false,
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
